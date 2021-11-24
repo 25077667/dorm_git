@@ -1,0 +1,22 @@
+# The env of docker-compose
+.env
+
+# VScode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# SWAG private files
+swag/config/log
+swag/config/keys
+swag/config/etc
+swag/config/.donoteditthisfile.conf
+swag/config/fail2ban/fail2ban.sqlite3
+
+.cache/
