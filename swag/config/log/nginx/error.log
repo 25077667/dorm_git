@@ -24,3 +24,4 @@
 2021/11/23 18:51:28 [error] 891#891: *1686 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 47.98.202.25, server: _, request: "GET /wp-login.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "140.117.178.171:443"
 2021/11/24 04:35:28 [crit] 891#891: *1767 SSL_read_early_data() failed (SSL: error:141CF06C:SSL routines:tls_parse_ctos_key_share:bad key share) while SSL handshaking, client: 192.241.211.236, server: 0.0.0.0:443
 2021/11/24 18:46:23 [crit] 891#891: *1921 SSL_read_early_data() failed (SSL: error:141CF06C:SSL routines:tls_parse_ctos_key_share:bad key share) while SSL handshaking, client: 64.62.197.212, server: 0.0.0.0:443
+2021/11/25 05:15:30 [crit] 493#493: *58 SSL_read_early_data() failed (SSL: error:141CF06C:SSL routines:tls_parse_ctos_key_share:bad key share) while SSL handshaking, client: 192.241.213.168, server: 0.0.0.0:443

@@ -4,5 +4,5 @@ logrotate state -- version 2
 "/config/log/letsencrypt/*.log" 2021-11-14-2:0:0
 "/config/log/nginx/error.log" 2021-11-21-2:0:0
 "/config/log/letsencrypt/letsencrypt.log" 2021-11-21-2:0:0
-"/config/log/php/error.log" 2021-11-21-2:0:0
 "/config/log/fail2ban/fail2ban.log" 2021-11-21-2:0:0
+"/config/log/php/error.log" 2021-11-21-2:0:0

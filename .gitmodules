@@ -1,0 +1,3 @@
+[submodule "OnlineJudge"]
+	path = OnlineJudge
+	url = git@github.com:25077667/OnlineJudge.git
