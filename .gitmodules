@@ -11,3 +11,4 @@
 [submodule "OnlineJudgeDeploy"]
 	path = OnlineJudgeDeploy
 	url = git@github.com:25077667/OnlineJudgeDeploy.git
+	branch = main
