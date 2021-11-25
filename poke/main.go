@@ -1,6 +1,8 @@
 package main
 
 import (
+	"crypto/rand"
+	"encoding/hex"
 	"net/http"
 	"sync"
 
@@ -31,21 +33,38 @@ func (rm *RegularIntMap) Store(key string, value int16) {
 	rm.Unlock()
 }
 
+func gen_random_tok() string {
+	b := make([]byte, 6)
+	if _, err := rand.Read(b); err != nil {
+		return ""
+	}
+	return hex.EncodeToString(b)
+}
+
 var poke = NewRegularIntMap()
 
 func main() {
 	r := gin.Default()
 
 	r.GET("/", func(c *gin.Context) {
-		ip := c.ClientIP()
+		random_tok := "/poke/user/" + gen_random_tok()
+		c.Redirect(http.StatusFound, c.Request.URL.Path+random_tok)
+	})
 
-		if val, ok := poke.Load(ip); ok {
-			poke.Store(ip, val+1)
+	r.GET("/poke", func(c *gin.Context) {
+		random_tok := "/user/" + gen_random_tok()
+		c.Redirect(http.StatusFound, c.Request.URL.RequestURI()+"/poke/"+random_tok)
+	})
+
+	r.GET("/poke/user/:tok", func(c *gin.Context) {
+		tok := c.Param("tok")
+		if val, ok := poke.Load(tok); ok {
+			poke.Store(tok, val+1)
 		} else {
-			poke.Store(ip, 0)
+			poke.Store(tok, 0)
 		}
 		c.String(http.StatusOK, "%d", func() int16 {
-			ret, _ := poke.Load(ip)
+			ret, _ := poke.Load(tok)
 			return ret
 		}())
 	})
