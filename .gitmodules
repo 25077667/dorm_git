@@ -4,3 +4,4 @@
 [submodule "Judger"]
 	path = Judger
 	url = git@github.com:25077667/Judger.git
+	branch = main
