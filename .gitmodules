@@ -5,3 +5,6 @@
 	path = Judger
 	url = git@github.com:25077667/Judger.git
 	branch = main
+[submodule "JudgeServer"]
+	path = JudgeServer
+	url = git@github.com:25077667/JudgeServer.git
