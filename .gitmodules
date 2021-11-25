@@ -8,3 +8,6 @@
 [submodule "JudgeServer"]
 	path = JudgeServer
 	url = git@github.com:25077667/JudgeServer.git
+[submodule "OnlineJudgeDeploy"]
+	path = OnlineJudgeDeploy
+	url = git@github.com:25077667/OnlineJudgeDeploy.git
