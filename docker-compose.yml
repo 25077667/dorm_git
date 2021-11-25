@@ -24,7 +24,7 @@ services:
             - TZ=Asia/Taipei
             - URL=dorm.scc-net.tw
             - VALIDATION=http
-            - SUBDOMAINS=poke,
+            - SUBDOMAINS=poke, oj
         volumes:
             - "./swag/config:/config"
         ports:
@@ -35,9 +35,10 @@ services:
             - poke
         networks: 
             - poke
-
-
+            - oj
 
 networks:
     poke:
+        driver: bridge
+    oj:
         driver: bridge
