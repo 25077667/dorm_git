@@ -1,3 +1,6 @@
 [submodule "OnlineJudge"]
 	path = OnlineJudge
 	url = git@github.com:25077667/OnlineJudge.git
+[submodule "Judger"]
+	path = Judger
+	url = git@github.com:25077667/Judger.git
