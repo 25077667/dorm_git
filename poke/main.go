@@ -48,15 +48,10 @@ func main() {
 
 	r.GET("/", func(c *gin.Context) {
 		random_tok := "/poke/user/" + gen_random_tok()
-		c.Redirect(http.StatusFound, c.Request.URL.Path+random_tok)
+		c.Redirect(http.StatusFound, random_tok)
 	})
 
-	r.GET("/poke", func(c *gin.Context) {
-		random_tok := "/user/" + gen_random_tok()
-		c.Redirect(http.StatusFound, c.Request.URL.RequestURI()+"/poke/"+random_tok)
-	})
-
-	r.GET("/poke/user/:tok", func(c *gin.Context) {
+	r.GET("/user/:tok", func(c *gin.Context) {
 		tok := c.Param("tok")
 		if val, ok := poke.Load(tok); ok {
 			poke.Store(tok, val+1)
