@@ -17,6 +17,6 @@ swag/config/log
 swag/config/keys
 swag/config/etc
 swag/config/.donoteditthisfile.conf
-swag/config/fail2ban/
+swag/config/fail2ban
 
 .cache/
