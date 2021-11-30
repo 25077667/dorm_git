@@ -18,6 +18,7 @@ services:
             - TZ=Asia/Taipei
             - URL=dorm.scc-net.tw
             - VALIDATION=http
+            - SUBDOMAINS=oj,
         volumes:
             - "./swag/config:/config"
         ports:
