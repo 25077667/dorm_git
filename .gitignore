@@ -20,3 +20,4 @@ swag/config/.donoteditthisfile.conf
 swag/config/fail2ban
 
 .cache/
+*.mkv
